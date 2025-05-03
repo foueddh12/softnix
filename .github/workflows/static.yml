@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نص فوق فيديو</title>
+  <style>
+    /* إعداد الصفحة */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* إعداد الفيديو */
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* عرض الفيديو يغطي كامل الصفحة */
+    }
+
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* إعداد النص فوق الفيديو */
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <video autoplay muted loop class="video-bg">
+      <source src="samurai-theme-moewalls-com.mp4" type="video/mp4">
+      متصفحك لا يدعم الفيديو.
+    </video>
+    <div class="overlay-text">أهلاً بك في موقعي!</div>
+  </div>
+
+</body>
+</html>
